@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Tictactoe</string>
-    <string name="mode">Day</string>
+    <string name="mode">Night</string>
 </resources>
