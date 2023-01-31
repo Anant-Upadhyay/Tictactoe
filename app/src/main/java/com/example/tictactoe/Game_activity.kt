@@ -27,7 +27,6 @@ class Game_activity : AppCompatActivity() {
         wp2.text = WP2.toString()
         P1.text = intent.getStringExtra("Person1")
         P2.text = intent.getStringExtra("Person2")
-
         val back:Button = findViewById(R.id.back)
         val restart:Button = findViewById(R.id.restart)
         val b1:ImageButton = findViewById(R.id.b1)
@@ -265,28 +264,46 @@ class Game_activity : AppCompatActivity() {
             }
 
         }
+        fun SO(){
+            if (resources.getString(R.string.mode) == "Day") {
+                P2.setTextColor(Color.BLACK)
+                wp2.setTextColor(Color.BLACK)
+                w2.setTextColor(Color.BLACK)
+            } else {
+                P2.setTextColor(Color.WHITE)
+                wp2.setTextColor(Color.WHITE)
+                w2.setTextColor(Color.WHITE)
+            }
+            P1.setTextColor(Color.parseColor("#B71C1C"))
+            wp1.setTextColor(Color.parseColor("#B71C1C"))
+            w1.setTextColor(Color.parseColor("#B71C1C"))
+        }
+        fun SX(){
+            P2.setTextColor(Color.parseColor("#B71C1C"))
+            wp2.setTextColor(Color.parseColor("#B71C1C"))
+            w2.setTextColor(Color.parseColor("#B71C1C"))
+            if (resources.getString(R.string.mode) == "Day") {
+                P1.setTextColor(Color.BLACK)
+                wp1.setTextColor(Color.BLACK)
+                w1.setTextColor(Color.BLACK)
+            } else {
+                P1.setTextColor(Color.WHITE)
+                wp1.setTextColor(Color.WHITE)
+                w1.setTextColor(Color.WHITE)
+            }
+        }
         fun Change(i: Int){
             if(i==1) {
                     if (turn == "X") {
                         Ib1m="X"
                         turn = "O"
-                        P2.setTextColor(Color.parseColor("#B71C1C"))
-                        wp2.setTextColor(Color.parseColor("#B71C1C"))
-                        w2.setTextColor(Color.parseColor("#B71C1C"))
-                        P1.setTextColor(Color.BLACK)
-                        wp1.setTextColor(Color.BLACK)
-                        w1.setTextColor(Color.BLACK)
+                        SX()
                         b1.setImageResource(R.drawable.cross)
 
                     } else if (turn == "O") {
                         Ib1m="O"
                         turn = "X"
-                        P2.setTextColor(Color.BLACK)
-                        wp2.setTextColor(Color.BLACK)
-                        w2.setTextColor(Color.BLACK)
-                        P1.setTextColor(Color.parseColor("#B71C1C"))
-                        wp1.setTextColor(Color.parseColor("#B71C1C"))
-                        w1.setTextColor(Color.parseColor("#B71C1C"))
+                        SO()
                         b1.setImageResource(R.drawable.nought)
                     }
             }
@@ -294,23 +311,13 @@ class Game_activity : AppCompatActivity() {
                     if (turn == "X") {
                         Ib2m="X"
                         turn = "O"
-                        P2.setTextColor(Color.parseColor("#B71C1C"))
-                        wp2.setTextColor(Color.parseColor("#B71C1C"))
-                        w2.setTextColor(Color.parseColor("#B71C1C"))
-                        P1.setTextColor(Color.BLACK)
-                        wp1.setTextColor(Color.BLACK)
-                        w1.setTextColor(Color.BLACK)
+                        SX()
                         b2.setImageResource(R.drawable.cross)
 
                     } else if (turn == "O") {
                         Ib2m="O"
                         turn = "X"
-                        P2.setTextColor(Color.BLACK)
-                        wp2.setTextColor(Color.BLACK)
-                        w2.setTextColor(Color.BLACK)
-                        P1.setTextColor(Color.parseColor("#B71C1C"))
-                        wp1.setTextColor(Color.parseColor("#B71C1C"))
-                        w1.setTextColor(Color.parseColor("#B71C1C"))
+                        SO()
                         b2.setImageResource(R.drawable.nought)
                     }
             }
@@ -318,23 +325,13 @@ class Game_activity : AppCompatActivity() {
                     if (turn == "X") {
                         Ib3m="X"
                         turn = "O"
-                        P2.setTextColor(Color.parseColor("#B71C1C"))
-                        wp2.setTextColor(Color.parseColor("#B71C1C"))
-                        w2.setTextColor(Color.parseColor("#B71C1C"))
-                        P1.setTextColor(Color.BLACK)
-                        wp1.setTextColor(Color.BLACK)
-                        w1.setTextColor(Color.BLACK)
+                        SX()
                         b3.setImageResource(R.drawable.cross)
 
                     } else if (turn == "O") {
                         Ib3m="O"
                         turn = "X"
-                        P2.setTextColor(Color.BLACK)
-                        wp2.setTextColor(Color.BLACK)
-                        w2.setTextColor(Color.BLACK)
-                        P1.setTextColor(Color.parseColor("#B71C1C"))
-                        wp1.setTextColor(Color.parseColor("#B71C1C"))
-                        w1.setTextColor(Color.parseColor("#B71C1C"))
+                        SO()
                         b3.setImageResource(R.drawable.nought)
                     }
             }
@@ -342,23 +339,13 @@ class Game_activity : AppCompatActivity() {
                     if (turn == "X") {
                         Ib4m="X"
                         turn = "O"
-                        P2.setTextColor(Color.parseColor("#B71C1C"))
-                        wp2.setTextColor(Color.parseColor("#B71C1C"))
-                        w2.setTextColor(Color.parseColor("#B71C1C"))
-                        P1.setTextColor(Color.BLACK)
-                        wp1.setTextColor(Color.BLACK)
-                        w1.setTextColor(Color.BLACK)
+                        SX()
                         b4.setImageResource(R.drawable.cross)
 
                     } else if (turn == "O") {
                         Ib4m="O"
                         turn = "X"
-                        P2.setTextColor(Color.BLACK)
-                        wp2.setTextColor(Color.BLACK)
-                        w2.setTextColor(Color.BLACK)
-                        P1.setTextColor(Color.parseColor("#B71C1C"))
-                        wp1.setTextColor(Color.parseColor("#B71C1C"))
-                        w1.setTextColor(Color.parseColor("#B71C1C"))
+                        SO()
                         b4.setImageResource(R.drawable.nought)
                     }
             }
@@ -366,23 +353,13 @@ class Game_activity : AppCompatActivity() {
                     if (turn == "X") {
                         Ib5m="X"
                         turn = "O"
-                        P2.setTextColor(Color.parseColor("#B71C1C"))
-                        wp2.setTextColor(Color.parseColor("#B71C1C"))
-                        w2.setTextColor(Color.parseColor("#B71C1C"))
-                        P1.setTextColor(Color.BLACK)
-                        wp1.setTextColor(Color.BLACK)
-                        w1.setTextColor(Color.BLACK)
+                        SX()
                         b5.setImageResource(R.drawable.cross)
 
                     } else if (turn == "O") {
                         Ib5m="O"
                         turn = "X"
-                        P2.setTextColor(Color.BLACK)
-                        wp2.setTextColor(Color.BLACK)
-                        w2.setTextColor(Color.BLACK)
-                        P1.setTextColor(Color.parseColor("#B71C1C"))
-                        wp1.setTextColor(Color.parseColor("#B71C1C"))
-                        w1.setTextColor(Color.parseColor("#B71C1C"))
+                        SO()
                         b5.setImageResource(R.drawable.nought)
                     }
             }
@@ -390,23 +367,13 @@ class Game_activity : AppCompatActivity() {
                     if (turn == "X") {
                         Ib6m="X"
                         turn = "O"
-                        P2.setTextColor(Color.parseColor("#B71C1C"))
-                        wp2.setTextColor(Color.parseColor("#B71C1C"))
-                        w2.setTextColor(Color.parseColor("#B71C1C"))
-                        P1.setTextColor(Color.BLACK)
-                        wp1.setTextColor(Color.BLACK)
-                        w1.setTextColor(Color.BLACK)
+                        SX()
                         b6.setImageResource(R.drawable.cross)
 
                     } else if (turn == "O") {
                         Ib6m="O"
                         turn = "X"
-                        P2.setTextColor(Color.BLACK)
-                        wp2.setTextColor(Color.BLACK)
-                        w2.setTextColor(Color.BLACK)
-                        P1.setTextColor(Color.parseColor("#B71C1C"))
-                        wp1.setTextColor(Color.parseColor("#B71C1C"))
-                        w1.setTextColor(Color.parseColor("#B71C1C"))
+                        SO()
                         b6.setImageResource(R.drawable.nought)
                     }
             }
@@ -414,23 +381,13 @@ class Game_activity : AppCompatActivity() {
                     if (turn == "X") {
                         Ib7m="X"
                         turn = "O"
-                        P2.setTextColor(Color.parseColor("#B71C1C"))
-                        wp2.setTextColor(Color.parseColor("#B71C1C"))
-                        w2.setTextColor(Color.parseColor("#B71C1C"))
-                        P1.setTextColor(Color.BLACK)
-                        wp1.setTextColor(Color.BLACK)
-                        w1.setTextColor(Color.BLACK)
+                        SX()
                         b7.setImageResource(R.drawable.cross)
 
                     } else if (turn == "O") {
                         Ib7m="O"
                         turn = "X"
-                        P2.setTextColor(Color.BLACK)
-                        wp2.setTextColor(Color.BLACK)
-                        w2.setTextColor(Color.BLACK)
-                        P1.setTextColor(Color.parseColor("#B71C1C"))
-                        wp1.setTextColor(Color.parseColor("#B71C1C"))
-                        w1.setTextColor(Color.parseColor("#B71C1C"))
+                        SO()
                         b7.setImageResource(R.drawable.nought)
                     }
             }
@@ -438,23 +395,13 @@ class Game_activity : AppCompatActivity() {
                     if (turn == "X") {
                         Ib8m="X"
                         turn = "O"
-                        P2.setTextColor(Color.parseColor("#B71C1C"))
-                        wp2.setTextColor(Color.parseColor("#B71C1C"))
-                        w2.setTextColor(Color.parseColor("#B71C1C"))
-                        P1.setTextColor(Color.BLACK)
-                        wp1.setTextColor(Color.BLACK)
-                        w1.setTextColor(Color.BLACK)
+                        SX()
                         b8.setImageResource(R.drawable.cross)
 
                     } else if (turn == "O") {
                         Ib8m="O"
                         turn = "X"
-                        P2.setTextColor(Color.BLACK)
-                        wp2.setTextColor(Color.BLACK)
-                        w2.setTextColor(Color.BLACK)
-                        P1.setTextColor(Color.parseColor("#B71C1C"))
-                        wp1.setTextColor(Color.parseColor("#B71C1C"))
-                        w1.setTextColor(Color.parseColor("#B71C1C"))
+                        SO()
                         b8.setImageResource(R.drawable.nought)
                     }
                 }
@@ -462,24 +409,14 @@ class Game_activity : AppCompatActivity() {
                     if (turn == "X") {
                         Ib9m="X"
                         turn = "O"
-                        P2.setTextColor(Color.parseColor("#B71C1C"))
-                        wp2.setTextColor(Color.parseColor("#B71C1C"))
-                        w2.setTextColor(Color.parseColor("#B71C1C"))
-                        P1.setTextColor(Color.BLACK)
-                        wp1.setTextColor(Color.BLACK)
-                        w1.setTextColor(Color.BLACK)
+                        SX()
                         b9.setImageResource(R.drawable.cross)
 
                     }
                     else if (turn == "O") {
                         Ib9m="O"
                         turn = "X"
-                        P2.setTextColor(Color.BLACK)
-                        wp2.setTextColor(Color.BLACK)
-                        w2.setTextColor(Color.BLACK)
-                        P1.setTextColor(Color.parseColor("#B71C1C"))
-                        wp1.setTextColor(Color.parseColor("#B71C1C"))
-                        w1.setTextColor(Color.parseColor("#B71C1C"))
+                        SO()
                         b9.setImageResource(R.drawable.nought)
                     }
             }
@@ -579,12 +516,7 @@ class Game_activity : AppCompatActivity() {
             Ib8m=""
             Ib9m=""
             turn="X"
-            P2.setTextColor(Color.BLACK)
-            wp2.setTextColor(Color.BLACK)
-            w2.setTextColor(Color.BLACK)
-            P1.setTextColor(Color.parseColor("#B71C1C"))
-            wp1.setTextColor(Color.parseColor("#B71C1C"))
-            w1.setTextColor(Color.parseColor("#B71C1C"))
+            SO()
         }
 
     }
