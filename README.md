@@ -1,3 +1,2 @@
 # Tictactoe
-I am newbie on github,your contributions or suggestions are welcome.
-This is a simple app to play the classic tic-tac-toe game
+An simple android project built on Android studio to play the classic tic-tac-toe game
